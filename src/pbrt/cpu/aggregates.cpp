@@ -1167,12 +1167,12 @@ GridAggregate::GridAggregate(std::vector<Primitive> p) : primitives(std::move(p)
         bounds = Union(bounds, prim.Bounds());
 
     Vector3f delta = bounds.pMax - bounds.pMin;
-    int maxAxis = bounds.MaximumExtent();
+    int maxAxis = bounds.MaxDimension();
     Float invMaxWidth = 1 / delta[maxAxis];
     Float cubeRoot = 3 * std::cbrt((Float)primitives.size());
     Float voxelsPerUnitDist = cubeRoot * invMaxWidth;
     for (int axis = 0; axis < 3; ++axis) {
-        nVoxels[axis] = Clamp(Round2Int(delta[axis] * voxelsPerUnitDist), 1, 64);
+        nVoxels[axis] = Clamp(int(std::floor(delta[axis] * voxelsPerUnitDist + 0.5f)), 1, 64);
         width[axis] = delta[axis] / nVoxels[axis];
         invWidth[axis] = width[axis] > 0 ? 1 / width[axis] : 0;
     }
