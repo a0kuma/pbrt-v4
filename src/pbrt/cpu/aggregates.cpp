@@ -16,6 +16,7 @@
 #include <pbrt/util/stats.h>
 
 #include <algorithm>
+#include <cmath>
 #include <tuple>
 
 namespace pbrt {
@@ -1160,6 +1161,152 @@ KdTreeAggregate *KdTreeAggregate::Create(std::vector<Primitive> prims,
                                maxPrims, maxDepth);
 }
 
+// GridAggregate Method Definitions
+GridAggregate::GridAggregate(std::vector<Primitive> p) : primitives(std::move(p)) {
+    for (const Primitive &prim : primitives)
+        bounds = Union(bounds, prim.Bounds());
+
+    Vector3f delta = bounds.pMax - bounds.pMin;
+    int maxAxis = bounds.MaximumExtent();
+    Float invMaxWidth = 1 / delta[maxAxis];
+    Float cubeRoot = 3 * std::cbrt((Float)primitives.size());
+    Float voxelsPerUnitDist = cubeRoot * invMaxWidth;
+    for (int axis = 0; axis < 3; ++axis) {
+        nVoxels[axis] = Clamp(Round2Int(delta[axis] * voxelsPerUnitDist), 1, 64);
+        width[axis] = delta[axis] / nVoxels[axis];
+        invWidth[axis] = width[axis] > 0 ? 1 / width[axis] : 0;
+    }
+
+    voxels.resize(nVoxels[0] * nVoxels[1] * nVoxels[2]);
+
+    for (size_t i = 0; i < primitives.size(); ++i) {
+        Bounds3f pb = primitives[i].Bounds();
+        int vmin[3], vmax[3];
+        for (int axis = 0; axis < 3; ++axis) {
+            vmin[axis] = posToVoxel(pb.pMin, axis);
+            vmax[axis] = posToVoxel(pb.pMax, axis);
+        }
+        for (int z = vmin[2]; z <= vmax[2]; ++z)
+            for (int y = vmin[1]; y <= vmax[1]; ++y)
+                for (int x = vmin[0]; x <= vmax[0]; ++x)
+                    voxels[offset(x, y, z)].push_back(i);
+    }
+}
+
+int GridAggregate::posToVoxel(const Point3f &P, int axis) const {
+    int v = int((P[axis] - bounds.pMin[axis]) * invWidth[axis]);
+    return Clamp(v, 0, nVoxels[axis] - 1);
+}
+
+Float GridAggregate::voxelToPos(int p, int axis) const {
+    return bounds.pMin[axis] + p * width[axis];
+}
+
+pstd::optional<ShapeIntersection> GridAggregate::Intersect(const Ray &r, Float tMax) const {
+    Float rayTMin, rayTMax;
+    if (!bounds.IntersectP(r.o, r.d, tMax, &rayTMin, &rayTMax))
+        return {};
+    if (rayTMin < 0) rayTMin = 0;
+    Point3f gridIntersect = r(rayTMin);
+
+    Float NextCrossingT[3], DeltaT[3];
+    int Step[3], Out[3], Pos[3];
+    for (int axis = 0; axis < 3; ++axis) {
+        Pos[axis] = posToVoxel(gridIntersect, axis);
+        if (r.d[axis] >= 0) {
+            NextCrossingT[axis] = rayTMin +
+                (voxelToPos(Pos[axis] + 1, axis) - gridIntersect[axis]) / r.d[axis];
+            DeltaT[axis] = width[axis] / r.d[axis];
+            Step[axis] = 1;
+            Out[axis] = nVoxels[axis];
+        } else {
+            NextCrossingT[axis] = rayTMin +
+                (voxelToPos(Pos[axis], axis) - gridIntersect[axis]) / r.d[axis];
+            DeltaT[axis] = -width[axis] / r.d[axis];
+            Step[axis] = -1;
+            Out[axis] = -1;
+        }
+    }
+
+    pstd::optional<ShapeIntersection> si;
+    while (true) {
+        int o = offset(Pos[0], Pos[1], Pos[2]);
+        for (int index : voxels[o]) {
+            pstd::optional<ShapeIntersection> psi = primitives[index].Intersect(r, tMax);
+            if (psi && psi->tHit < tMax) {
+                tMax = psi->tHit;
+                si = psi;
+            }
+        }
+
+        int bits = ((NextCrossingT[0] < NextCrossingT[1]) << 2) |
+                    ((NextCrossingT[0] < NextCrossingT[2]) << 1) |
+                    ((NextCrossingT[1] < NextCrossingT[2]));
+        static const int cmpToAxis[8] = {2, 1, 2, 1, 2, 2, 0, 0};
+        int stepAxis = cmpToAxis[bits];
+        if (tMax < NextCrossingT[stepAxis])
+            break;
+        Pos[stepAxis] += Step[stepAxis];
+        if (Pos[stepAxis] == Out[stepAxis])
+            break;
+        NextCrossingT[stepAxis] += DeltaT[stepAxis];
+    }
+    return si;
+}
+
+bool GridAggregate::IntersectP(const Ray &r, Float tMax) const {
+    Float rayTMin, rayTMax;
+    if (!bounds.IntersectP(r.o, r.d, tMax, &rayTMin, &rayTMax))
+        return false;
+    if (rayTMin < 0) rayTMin = 0;
+    Point3f gridIntersect = r(rayTMin);
+
+    Float NextCrossingT[3], DeltaT[3];
+    int Step[3], Out[3], Pos[3];
+    for (int axis = 0; axis < 3; ++axis) {
+        Pos[axis] = posToVoxel(gridIntersect, axis);
+        if (r.d[axis] >= 0) {
+            NextCrossingT[axis] = rayTMin +
+                (voxelToPos(Pos[axis] + 1, axis) - gridIntersect[axis]) / r.d[axis];
+            DeltaT[axis] = width[axis] / r.d[axis];
+            Step[axis] = 1;
+            Out[axis] = nVoxels[axis];
+        } else {
+            NextCrossingT[axis] = rayTMin +
+                (voxelToPos(Pos[axis], axis) - gridIntersect[axis]) / r.d[axis];
+            DeltaT[axis] = -width[axis] / r.d[axis];
+            Step[axis] = -1;
+            Out[axis] = -1;
+        }
+    }
+
+    while (true) {
+        int o = offset(Pos[0], Pos[1], Pos[2]);
+        for (int index : voxels[o]) {
+            if (primitives[index].IntersectP(r, tMax))
+                return true;
+        }
+
+        int bits = ((NextCrossingT[0] < NextCrossingT[1]) << 2) |
+                    ((NextCrossingT[0] < NextCrossingT[2]) << 1) |
+                    ((NextCrossingT[1] < NextCrossingT[2]));
+        static const int cmpToAxis[8] = {2, 1, 2, 1, 2, 2, 0, 0};
+        int stepAxis = cmpToAxis[bits];
+        if (tMax < NextCrossingT[stepAxis])
+            break;
+        Pos[stepAxis] += Step[stepAxis];
+        if (Pos[stepAxis] == Out[stepAxis])
+            break;
+        NextCrossingT[stepAxis] += DeltaT[stepAxis];
+    }
+    return false;
+}
+
+GridAggregate *GridAggregate::Create(std::vector<Primitive> prims,
+                                     const ParameterDictionary &) {
+    return new GridAggregate(std::move(prims));
+}
+
 Primitive CreateAccelerator(const std::string &name, std::vector<Primitive> prims,
                             const ParameterDictionary &parameters) {
     Primitive accel = nullptr;
@@ -1167,6 +1314,8 @@ Primitive CreateAccelerator(const std::string &name, std::vector<Primitive> prim
         accel = BVHAggregate::Create(std::move(prims), parameters);
     else if (name == "kdtree")
         accel = KdTreeAggregate::Create(std::move(prims), parameters);
+    else if (name == "grid")
+        accel = GridAggregate::Create(std::move(prims), parameters);
     else
         ErrorExit("%s: accelerator type unknown.", name);
 
