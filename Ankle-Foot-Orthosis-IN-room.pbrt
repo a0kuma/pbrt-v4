@@ -32,7 +32,7 @@ WorldBegin
 
     # Floor (8m x 12m rectangle at z=0)
     AttributeBegin
-        Material "FloorMat"
+        NamedMaterial "FloorMat"
         Shape "trianglemesh" 
             "point3 P" [ -4 -6 0   4 -6 0   4 6 0   -4 6 0 ]
             "integer indices" [ 0 1 2   0 2 3 ]
@@ -40,7 +40,7 @@ WorldBegin
 
     # Far wall (back wall at y=6m, from floor to 3m height)
     AttributeBegin
-        Material "WallMat"
+        NamedMaterial "WallMat"
         Shape "trianglemesh"
             "point3 P" [ -4 6 0   4 6 0   4 6 3   -4 6 3 ]
             "integer indices" [ 0 1 2   0 2 3 ]
@@ -48,7 +48,7 @@ WorldBegin
 
     # Right wall (at x=4m, from y=-6 to 6, interior facing -X)
     AttributeBegin
-        Material "WallMat"
+        NamedMaterial "WallMat"
         Shape "trianglemesh"
             "point3 P" [ 4 -6 0   4 6 0   4 6 3   4 -6 3 ]
             "integer indices" [ 0 1 2   0 2 3 ]
@@ -57,7 +57,7 @@ WorldBegin
     # AFO model (Loop subdiv shape, foot+upright surfaces)
     AttributeBegin
         Translate 0 0 0.005   # lift slightly above floor
-        Material "AfoMat"
+        NamedMaterial "AfoMat"
         Shape "loopsubdiv" 
             "integer levels" [3] 
             "point3 P" [
