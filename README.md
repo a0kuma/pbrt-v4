@@ -1,13 +1,6 @@
 pbrt, Version 4 (Early Release)
 ===============================
 
-[<img src="https://github.com/mmp/pbrt-v4/workflows/cpu-linux-build-and-test/badge.svg">](https://github.com/mmp/pbrt-v4/actions?query=workflow%3Acpu-linux-build-and-test)
-[<img src="https://github.com/mmp/pbrt-v4/workflows/cpu-macos-build-and-test/badge.svg">](https://github.com/mmp/pbrt-v4/actions?query=workflow%3Acpu-macos-build-and-test)
-[<img src="https://github.com/mmp/pbrt-v4/workflows/cpu-windows-build-and-test/badge.svg">](https://github.com/mmp/pbrt-v4/actions?query=workflow%3Acpu-windows-build-and-test)
-[<img src="https://github.com/mmp/pbrt-v4/workflows/gpu-build-only/badge.svg">](https://github.com/mmp/pbrt-v4/actions?query=workflow%3Agpu-build-only)
-
-![Transparent Machines frame, via @beeple](images/teaser-transparent-machines.png)
-
 This is an early release of pbrt-v4, the rendering system that will be
 described in the forthcoming fourth edition of *Physically Based Rendering:
 From Theory to Implementation*.  (The printed book will be available in
