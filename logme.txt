@@ -1,0 +1,73 @@
+[ tid 3205892 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205894 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205895 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205896 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205893 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205897 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205899 @     0.000s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205903 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205902 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205901 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205898 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205900 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205904 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205906 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205907 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205905 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205908 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205909 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205910 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205911 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205912 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205913 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205914 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205915 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205917 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205918 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205919 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205916 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205920 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205921 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205922 @     0.001s util/parallel.cpp:53 ] Started execution in worker thread
+[ tid 3205859 @     0.003s util/display.cpp:113 ] Trying to connect to display server
+[ tid 3205859 @     0.005s util/display.cpp:161 ] Connected to display server
+[ tid 3205859 @     0.013s parser.cpp:610 ] Started parsing ./hedgehog.pbrt
+[ tid 3205859 @     0.013s cameras.cpp:50 ] World-space position: [ 100, 100, 100 ]
+[ tid 3205859 @     0.013s scene.cpp:748 ] Starting to create filter and film
+[ tid 3205859 @     0.013s film.h:195 ] Created film with full resolution [ 300, 300 ], pixelBounds [ [ 0, 0 ] - [ 300, 300 ] ]
+[ tid 3205859 @     0.016s scene.cpp:765 ] Finished creating filter and film
+[ tid 3205918 @     0.016s scene.cpp:769 ] Starting to create sampler
+[ tid 3205920 @     0.017s scene.cpp:778 ] Starting to create camera
+[ tid 3205920 @     0.018s cameras.cpp:196 ] Camera min pos differentials: [ 0, 0, -0 ], [ 0, 0, -0 ]
+[ tid 3205920 @     0.018s cameras.cpp:198 ] Camera min dir differentials: [ -0.00039377058, 0.0028453914, -0.0000041127205 ], [ 0.002816528, -0.00056437403, -0.000004053116 ]
+[ tid 3205920 @     0.018s scene.cpp:784 ] Finished creating camera
+[ tid 3205921 @     0.018s scene.h:290 ] Retrieved Camera from future
+[ tid 3205895 @     0.018s scene.h:290 ] Retrieved Camera from future
+[ tid 3205859 @     0.790s parser.cpp:640 ] Finished parsing ./hedgehog.pbrt
+[ tid 3205859 @     0.801s cpu/render.cpp:32 ] Starting textures
+[ tid 3205859 @     0.801s scene.cpp:1180 ] Starting to consume texture futures
+[ tid 3205859 @     0.801s scene.cpp:1192 ] Finished consuming texture futures
+[ tid 3205859 @     0.801s scene.cpp:1194 ] Starting to create remaining textures
+[ tid 3205859 @     0.801s scene.cpp:1250 ] Done creating textures
+[ tid 3205859 @     0.801s cpu/render.cpp:34 ] Finished textures
+[ tid 3205859 @     0.801s scene.cpp:1289 ] Starting area lights
+[ tid 3205859 @     0.802s scene.cpp:1341 ] Finished area lights
+[ tid 3205859 @     0.802s scene.cpp:1343 ] Starting to consume non-area light futures
+[ tid 3205859 @     0.802s scene.cpp:1347 ] Finished consuming non-area light futures
+[ tid 3205859 @     0.802s cpu/render.cpp:41 ] Starting materials
+[ tid 3205859 @     0.802s scene.cpp:1113 ] Starting to consume 0 normal map futures
+[ tid 3205859 @     0.802s scene.cpp:1120 ] Finished consuming normal map futures
+[ tid 3205859 @     0.829s cpu/render.cpp:45 ] Finished materials
+[ tid 3205859 @     0.829s scene.cpp:1444 ] Starting shapes
+[ tid 3205859 @     0.874s scene.cpp:1519 ] Finished shapes
+[ tid 3205859 @     0.874s scene.cpp:1522 ] Starting instances
+[ tid 3205859 @     0.874s scene.cpp:1581 ] Finished instances
+[ tid 3205859 @     0.874s scene.cpp:1585 ] Starting top-level accelerator
+[ tid 3205859 @     0.874s cpu/aggregates.cpp:1313 ] 						[除錯資訊] Primitive CreateAccelerator [已經被執行] 類別: grid
+[ tid 3205859 @     0.999s scene.cpp:1589 ] Finished top-level accelerator
+[ tid 3205859 @     0.999s scene.h:290 ] Retrieved Camera from future
+[ tid 3205859 @     0.999s scene.h:302 ] Retrieved Sampler from future
+[ tid 3205859 @     0.999s cpu/render.cpp:55 ] Starting to create integrator
+[ tid 3205859 @     0.999s cpu/integrators.h:70 ] Scene bounds [ [ -229.9747, -229.98758, -229.99072 ] - [ 29.928802, 29.978561, 29.967514 ] ]
+[ tid 3205859 @     0.999s cpu/render.cpp:58 ] Finished creating integrator
+[ tid 3205859 @     1.000s cpu/render.cpp:103 ] Memory used after scene creation: 149118976

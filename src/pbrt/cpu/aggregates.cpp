@@ -1309,6 +1309,9 @@ GridAggregate *GridAggregate::Create(std::vector<Primitive> prims,
 
 Primitive CreateAccelerator(const std::string &name, std::vector<Primitive> prims,
                             const ParameterDictionary &parameters) {
+
+LOG_VERBOSE("\t\t\t\t\t\t[除錯資訊] Primitive CreateAccelerator [已經被執行] 類別: %s", name);
+
     Primitive accel = nullptr;
     if (name == "bvh")
         accel = BVHAggregate::Create(std::move(prims), parameters);

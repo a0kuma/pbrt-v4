@@ -1,0 +1,19 @@
+LookAt 100 100 100   # eye
+       0 0 0     # look at point
+       0 1 0     # up vector
+Camera "perspective" "float fov" 70
+
+Sampler "halton" "integer pixelsamples" 1024
+Integrator "volpath"
+Film "rgb"
+     "integer xresolution" [900] "integer yresolution" [900]
+
+WorldBegin
+
+# uniform blue-ish illumination from all directions
+LightSource "infinite" "rgb L" [ 1 1 1 ]
+
+# approximate the sun
+LightSource "distant" "blackbody L" [ 1000 ] "point3 from" [ 200 200 200 ] "float scale" 1.0
+
+#====================================================================================================

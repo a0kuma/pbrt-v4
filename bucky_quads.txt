@@ -1,0 +1,384 @@
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 -85.065081 52.573111 85.065081 0.000000 0.000000 0.000000 -57.735027 -57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 85.065081 0.000000 57.735027 57.735027 57.735027 55.154069 71.400054 -28.867513 57.735027 57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 -85.065081 57.735027 57.735027 57.735027 42.532540 -26.286556 68.819096 85.065081 0.000000 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 57.735027 57.735027 57.735027 0.000000 52.573111 85.065081 28.867513 2.580958 71.400054 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 -85.065081 0.000000 52.573111 85.065081 16.245985 16.245985 0.000000 -52.573111 85.065081 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 85.065081 52.573111 85.065081 0.000000 42.532540 0.000000 42.532540 85.065081 -52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 85.065081 0.000000 85.065081 -52.573111 0.000000 0.000000 0.000000 0.000000 52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 -52.573111 0.000000 -57.735027 -57.735027 -57.735027 16.245985 -26.286556 42.532540 -52.573111 0.000000 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -52.573111 85.065081 0.000000 0.000000 52.573111 85.065081 -42.532540 -26.286556 68.819096 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 85.065081 -85.065081 52.573111 0.000000 -42.532540 26.286556 68.819096 -85.065081 0.000000 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 52.573111 0.000000 -52.573111 -85.065081 0.000000 -85.065081 0.000000 0.000000 -85.065081 -52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -52.573111 -85.065081 -85.065081 52.573111 0.000000 0.000000 -68.819096 -16.245985 0.000000 -85.065081 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -52.573111 -85.065081 -85.065081 0.000000 52.573111 42.532540 -26.286556 68.819096 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 52.573111 85.065081 0.000000 -52.573111 0.000000 0.000000 52.573111 85.065081 0.000000 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -52.573111 -85.065081 85.065081 0.000000 -52.573111 57.735027 -57.735027 0.000000 57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 -52.573111 0.000000 -85.065081 -52.573111 71.400054 -28.867513 -55.154069 57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 -52.573111 85.065081 0.000000 52.573111 57.735027 57.735027 0.000000 57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 52.573111 57.735027 -57.735027 57.735027 71.400054 28.867513 -2.580958 57.735027 57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 -52.573111 52.573111 -85.065081 0.000000 -55.154069 -13.665027 28.867513 -52.573111 -85.065081 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 -85.065081 0.000000 -57.735027 57.735027 -57.735027 -2.580958 -13.665027 28.867513 -57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 -52.573111 -57.735027 57.735027 -57.735027 -28.867513 -71.400054 55.154069 -57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 57.735027 -57.735027 0.000000 -85.065081 -52.573111 -28.867513 -13.665027 -2.580958 0.000000 -85.065081 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 -52.573111 0.000000 -85.065081 -52.573111 0.000000 0.000000 0.000000 57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -85.065081 -52.573111 52.573111 -85.065081 0.000000 -28.867513 -13.665027 2.580958 -57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -52.573111 -85.065081 0.000000 57.735027 -57.735027 -57.735027 52.573111 -85.065081 0.000000 57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 -85.065081 0.000000 57.735027 -57.735027 57.735027 57.735027 57.735027 -57.735027 -57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -52.573111 -85.065081 0.000000 -52.573111 0.000000 85.065081 57.735027 57.735027 -57.735027 -52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 57.735027 57.735027 -57.735027 -52.573111 0.000000 -85.065081 -85.065081 -52.573111 0.000000 -57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -52.573111 -85.065081 0.000000 0.000000 85.065081 -52.573111 -85.065081 -52.573111 0.000000 -57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 -52.573111 0.000000 -57.735027 -57.735027 57.735027 -57.735027 57.735027 -57.735027 0.000000 85.065081 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 -57.735027 57.735027 0.000000 -85.065081 52.573111 0.000000 85.065081 -52.573111 -85.065081 52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 85.065081 -52.573111 -85.065081 52.573111 0.000000 -85.065081 0.000000 52.573111 85.065081 52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 52.573111 0.000000 -85.065081 -52.573111 0.000000 0.000000 85.065081 -52.573111 -52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 85.065081 -52.573111 -52.573111 0.000000 -85.065081 52.573111 0.000000 -85.065081 0.000000 85.065081 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 52.573111 0.000000 -52.573111 85.065081 0.000000 52.573111 0.000000 -85.065081 -85.065081 52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 0.000000 -85.065081 -85.065081 52.573111 0.000000 0.000000 -85.065081 52.573111 85.065081 -52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 57.735027 57.735027 -52.573111 0.000000 85.065081 -85.065081 -52.573111 0.000000 52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 -52.573111 0.000000 52.573111 0.000000 -85.065081 85.065081 -52.573111 0.000000 -52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 57.735027 57.735027 0.000000 52.573111 85.065081 85.065081 -52.573111 0.000000 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 -52.573111 0.000000 0.000000 -52.573111 85.065081 57.735027 -57.735027 -57.735027 -52.573111 85.065081 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -52.573111 85.065081 57.735027 57.735027 -57.735027 85.065081 0.000000 52.573111 57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 52.573111 57.735027 -57.735027 57.735027 57.735027 -57.735027 -57.735027 57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 52.573111 0.000000 -85.065081 52.573111 0.000000 -52.573111 -85.065081 -57.735027 -57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -52.573111 -85.065081 -57.735027 -57.735027 57.735027 -57.735027 57.735027 -57.735027 0.000000 -85.065081 -52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 52.573111 -85.065081 -52.573111 0.000000 85.065081 52.573111 85.065081 0.000000 -52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 85.065081 0.000000 -52.573111 0.000000 -85.065081 -85.065081 -52.573111 0.000000 -57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 -52.573111 57.735027 57.735027 -57.735027 85.065081 0.000000 52.573111 -57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 0.000000 52.573111 -57.735027 -57.735027 -57.735027 -52.573111 0.000000 85.065081 57.735027 57.735027 57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 -85.065081 0.000000 57.735027 57.735027 57.735027 -52.573111 -85.065081 0.000000 85.065081 0.000000 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -52.573111 -85.065081 0.000000 85.065081 0.000000 52.573111 85.065081 0.000000 -52.573111 57.735027 57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 -52.573111 0.000000 -52.573111 -85.065081 52.573111 -85.065081 0.000000 -85.065081 0.000000 52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 -85.065081 0.000000 -85.065081 0.000000 52.573111 0.000000 -52.573111 85.065081 85.065081 0.000000 -52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 57.735027 -57.735027 57.735027 -85.065081 0.000000 52.573111 57.735027 -57.735027 -57.735027 -85.065081 52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 57.735027 -57.735027 -57.735027 -85.065081 52.573111 0.000000 -52.573111 85.065081 0.000000 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -85.065081 52.573111 57.735027 -57.735027 57.735027 0.000000 -85.065081 -52.573111 57.735027 57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 -85.065081 -52.573111 57.735027 57.735027 -57.735027 -57.735027 -57.735027 -57.735027 57.735027 -57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 0.000000 85.065081 -52.573111 52.573111 0.000000 -85.065081 85.065081 52.573111 0.000000 -52.573111 0.000000 -85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 85.065081 52.573111 0.000000 -52.573111 0.000000 -85.065081 0.000000 85.065081 52.573111 85.065081 -52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 57.735027 -57.735027 0.000000 85.065081 52.573111 -57.735027 -57.735027 57.735027 -85.065081 -52.573111 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 -57.735027 57.735027 -85.065081 -52.573111 0.000000 -52.573111 -85.065081 0.000000 0.000000 85.065081 -52.573111 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -57.735027 57.735027 57.735027 0.000000 52.573111 85.065081 57.735027 -57.735027 -57.735027 -52.573111 85.065081 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 57.735027 -57.735027 -57.735027 -52.573111 85.065081 0.000000 85.065081 -52.573111 0.000000 0.000000 -52.573111 85.065081 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ -85.065081 0.000000 -52.573111 57.735027 57.735027 57.735027 52.573111 -85.065081 0.000000 57.735027 57.735027 -57.735027 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
+AttributeBegin
+  Material "diffuse" "rgb reflectance" [0.8 0.1 0.1]
+  Shape "bilinearmesh"
+      "point3 P" [ 52.573111 -85.065081 0.000000 57.735027 57.735027 -57.735027 57.735027 -57.735027 57.735027 -52.573111 -85.065081 0.000000 ]
+      "point2 uv" [ 0 0   1 0    1 1   0 1 ]
+AttributeEnd
