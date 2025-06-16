@@ -1,0 +1,1192 @@
+[  1%] Built target glad
+[  2%] Built target cyhair2pbrt
+[  6%] Built target double-conversion
+[  7%] Built target utf8proc
+[  8%] Built target soac
+[  9%] Built target rgb2spec_opt
+[ 10%] Built target sky_lib
+[ 11%] Built target flip_lib
+[ 15%] Built target deflate
+[ 19%] Built target Ptex_static
+[ 37%] Built target glfw
+[ 43%] Built target cctest
+[ 44%] Built target pbrt_soa_generated
+[ 46%] Built target halftest
+[ 46%] Built target rtest
+[ 46%] Built target ptxinfo
+[ 46%] Built target ftest
+[ 47%] Built target wtest
+[ 48%] Building CUDA object CMakeFiles/optix.cu.dir/src/pbrt/gpu/optix/optix.ptx
+[ 50%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/media.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/lightsamplers.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/bssrdf.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/bxdfs.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/bsdf.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/materials.cpp.o
+[ 51%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/paramdict.cpp.o
+[ 50%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/cameras.cpp.o
+[ 52%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/filters.cpp.o
+[ 52%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/film.cpp.o
+[ 53%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/pbrt.cpp.o
+[ 53%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/interaction.cpp.o
+[ 54%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/lights.cpp.o
+[ 54%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/ray.cpp.o
+[ 56%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/integrators.cpp.o
+[ 56%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/textures.cpp.o
+[ 56%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/parser.cpp.o
+[ 56%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/aggregates.cpp.o
+[ 56%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/primitive.cpp.o
+[ 56%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/samplers.cpp.o
+[ 58%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/util/color.cpp.o
+[ 58%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/scene.cpp.o
+[ 59%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/render.cpp.o
+[ 59%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/shapes.cpp.o
+[ 59%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/util/gui.cpp.o
+[ 59%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/util/colorspace.cpp.o
+[ 59%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/util/image.cpp.o
+[ 60%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/util/lowdiscrepancy.cpp.o
+[ 60%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/util/memory.cpp.o
+[ 60%] Building CXX object CMakeFiles/pbrt_lib.dir/src/pbrt/util/loopsubdiv.cpp.o
+[ 60%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/util/math.cpp.o
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+[ 61%] Building CUDA object CMakeFiles/pbrt_lib.dir/src/pbrt/util/mesh.cpp.o
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/transform.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/camera.h:13,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/integrators.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/integrators.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/media.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/media.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/paramdict.h:15,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/parser.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/parser.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/paramdict.h:15,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/paramdict.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/light.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/primitive.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/aggregates.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/aggregates.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/light.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/primitive.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/primitive.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/transform.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/camera.h:13,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cameras.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cpu/render.cpp:7:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/transform.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/camera.h:13,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/cameras.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/scene.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/scene.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/transform.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/gui.h:17,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/gui.cpp:5:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/base/medium.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/ray.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/transform.h:10,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/loopsubdiv.cpp:12:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:380: CMakeFiles/pbrt_lib.dir/src/pbrt/ray.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/colorspace.h:12,
+                 from /home/andy/imhw/h2/pbrt-v4/src/pbrt/util/image.cpp:9:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h: In function ‘pbrt::SampledSpectrum pbrt::SafeDiv(SampledSpectrum, SampledSpectrum)’:
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:727:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  727 |         r.wavelengths = a.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:728:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  728 |         r.pdf = a.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:730:27: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::wavelengths’ is private within this context
+  730 |         r.wavelengths = b.wavelengths;
+      |                           ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:328:42: note: declared private here
+  328 |     pstd::array<Float, NSpectrumSamples> wavelengths;
+      |                                          ^~~~~~~~~~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:11: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |           ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:731:19: error: ‘pstd::array<float, 4> pbrt::SampledSpectrum::pdf’ is private within this context
+  731 |         r.pdf = b.pdf;
+      |                   ^~~
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h:329:42: note: declared private here
+  329 |     pstd::array<Float, NSpectrumSamples> pdf;
+      |                                          ^~~
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:669: CMakeFiles/pbrt_lib.dir/src/pbrt/util/gui.cpp.o] Error 1
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(125): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(211): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(469): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(556): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(597): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(628): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(658): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(701): warning #20014-D: calling a __host__ function from a __host__ __device__ function is not allowed
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/filters.cpp".
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/color.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:234: CMakeFiles/pbrt_lib.dir/src/pbrt/filters.cpp.o] Error 2
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:583: CMakeFiles/pbrt_lib.dir/src/pbrt/util/color.cpp.o] Error 2
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:712: CMakeFiles/pbrt_lib.dir/src/pbrt/util/loopsubdiv.cpp.o] Error 1
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/textures.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:439: CMakeFiles/pbrt_lib.dir/src/pbrt/textures.cpp.o] Error 2
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/colorspace.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:598: CMakeFiles/pbrt_lib.dir/src/pbrt/util/colorspace.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:337: CMakeFiles/pbrt_lib.dir/src/pbrt/paramdict.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/materials.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:468: CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/aggregates.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/pbrt.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:294: CMakeFiles/pbrt_lib.dir/src/pbrt/materials.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:366: CMakeFiles/pbrt_lib.dir/src/pbrt/pbrt.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:308: CMakeFiles/pbrt_lib.dir/src/pbrt/media.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/bxdfs.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:189: CMakeFiles/pbrt_lib.dir/src/pbrt/bxdfs.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:496: CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/primitive.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/interaction.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:249: CMakeFiles/pbrt_lib.dir/src/pbrt/interaction.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:510: CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/render.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/lightsamplers.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:279: CMakeFiles/pbrt_lib.dir/src/pbrt/lightsamplers.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:351: CMakeFiles/pbrt_lib.dir/src/pbrt/parser.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/bssrdf.cpp".
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(727): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(728): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(730): error: member "pbrt::SampledSpectrum::wavelengths"
+(328): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/spectrum.h(731): error: member "pbrt::SampledSpectrum::pdf"
+(329): here is inaccessible
+
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:174: CMakeFiles/pbrt_lib.dir/src/pbrt/bssrdf.cpp.o] Error 2
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/film.cpp".
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/bsdf.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:219: CMakeFiles/pbrt_lib.dir/src/pbrt/film.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:159: CMakeFiles/pbrt_lib.dir/src/pbrt/bsdf.cpp.o] Error 2
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/shapes.cpp".
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/util/mesh.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:424: CMakeFiles/pbrt_lib.dir/src/pbrt/shapes.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:771: CMakeFiles/pbrt_lib.dir/src/pbrt/util/mesh.cpp.o] Error 2
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/samplers.cpp".
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/cameras.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:395: CMakeFiles/pbrt_lib.dir/src/pbrt/samplers.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:204: CMakeFiles/pbrt_lib.dir/src/pbrt/cameras.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:683: CMakeFiles/pbrt_lib.dir/src/pbrt/util/image.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/lights.cpp".
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:264: CMakeFiles/pbrt_lib.dir/src/pbrt/lights.cpp.o] Error 2
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:482: CMakeFiles/pbrt_lib.dir/src/pbrt/cpu/integrators.cpp.o] Error 1
+8 errors detected in the compilation of "/home/andy/imhw/h2/pbrt-v4/src/pbrt/gpu/optix/optix.cu".
+make[2]: *** [CMakeFiles/optix.cu.dir/build.make:77: CMakeFiles/optix.cu.dir/src/pbrt/gpu/optix/optix.ptx] Error 1
+make[1]: *** [CMakeFiles/Makefile2:402: CMakeFiles/optix.cu.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/pbrt_lib.dir/build.make:409: CMakeFiles/pbrt_lib.dir/src/pbrt/scene.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:482: CMakeFiles/pbrt_lib.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2
