@@ -24,7 +24,7 @@
 #include <algorithm>
 #include <cmath>
 #include <map>
-#ifndef PBRT_IS_GPU_CODE
+#if defined(PBRT_ENABLE_SQL) && !defined(PBRT_IS_GPU_CODE)
 #include <mysql/mysql.h>
 #endif
 
@@ -2850,7 +2850,7 @@ std::string FindMatchingNamedSpectrum(Spectrum s) {
     return "";
 }
 
-#ifndef PBRT_IS_GPU_CODE
+#if defined(PBRT_ENABLE_SQL) && !defined(PBRT_IS_GPU_CODE)
 void LogSpectrumAssert(const char *file, int line, const char *tag, Float a,
                        Float b) {
     MYSQL *conn = mysql_init(nullptr);
