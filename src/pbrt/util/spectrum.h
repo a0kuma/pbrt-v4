@@ -85,6 +85,8 @@ DenselySampledSpectrum D(Float T, Allocator alloc);
 
 Float SpectrumToPhotometric(Spectrum s);
 
+class SampledWavelengths;
+
 XYZ SpectrumToXYZ(Spectrum s);
 
 // SampledSpectrum Definition
@@ -99,6 +101,15 @@ class SampledSpectrum {
 
     PBRT_CPU_GPU
     SampledSpectrum &operator-=(const SampledSpectrum &s) {
+        if (HasWavelengths() && s.HasWavelengths()) {
+            for (int i = 0; i < NSpectrumSamples; ++i) {
+                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ(pdf[i], s.pdf[i]);
+            }
+        } else if (!HasWavelengths() && s.HasWavelengths()) {
+            wavelengths = s.wavelengths;
+            pdf = s.pdf;
+        }
         for (int i = 0; i < NSpectrumSamples; ++i)
             values[i] -= s.values[i];
         return *this;
@@ -114,11 +125,24 @@ class SampledSpectrum {
         SampledSpectrum ret;
         for (int i = 0; i < NSpectrumSamples; ++i)
             ret.values[i] = a - s.values[i];
+        if (s.HasWavelengths()) {
+            ret.wavelengths = s.wavelengths;
+            ret.pdf = s.pdf;
+        }
         return ret;
     }
 
     PBRT_CPU_GPU
     SampledSpectrum &operator*=(const SampledSpectrum &s) {
+        if (HasWavelengths() && s.HasWavelengths()) {
+            for (int i = 0; i < NSpectrumSamples; ++i) {
+                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ(pdf[i], s.pdf[i]);
+            }
+        } else if (!HasWavelengths() && s.HasWavelengths()) {
+            wavelengths = s.wavelengths;
+            pdf = s.pdf;
+        }
         for (int i = 0; i < NSpectrumSamples; ++i)
             values[i] *= s.values[i];
         return *this;
@@ -148,6 +172,15 @@ class SampledSpectrum {
 
     PBRT_CPU_GPU
     SampledSpectrum &operator/=(const SampledSpectrum &s) {
+        if (HasWavelengths() && s.HasWavelengths()) {
+            for (int i = 0; i < NSpectrumSamples; ++i) {
+                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ(pdf[i], s.pdf[i]);
+            }
+        } else if (!HasWavelengths() && s.HasWavelengths()) {
+            wavelengths = s.wavelengths;
+            pdf = s.pdf;
+        }
         for (int i = 0; i < NSpectrumSamples; ++i) {
             DCHECK_NE(0, s.values[i]);
             values[i] /= s.values[i];
@@ -178,6 +211,10 @@ class SampledSpectrum {
         SampledSpectrum ret;
         for (int i = 0; i < NSpectrumSamples; ++i)
             ret.values[i] = -values[i];
+        if (HasWavelengths()) {
+            ret.wavelengths = wavelengths;
+            ret.pdf = pdf;
+        }
         return ret;
     }
     PBRT_CPU_GPU
@@ -202,14 +239,24 @@ class SampledSpectrum {
     PBRT_CPU_GPU
     Float y(const SampledWavelengths &lambda) const;
 
-    SampledSpectrum() = default;
+    SampledSpectrum() {
+        values.fill(0);
+        wavelengths.fill(-1);
+        pdf.fill(0);
+    }
     PBRT_CPU_GPU
-    explicit SampledSpectrum(Float c) { values.fill(c); }
+    explicit SampledSpectrum(Float c) {
+        values.fill(c);
+        wavelengths.fill(-1);
+        pdf.fill(0);
+    }
     PBRT_CPU_GPU
     SampledSpectrum(pstd::span<const Float> v) {
         DCHECK_EQ(NSpectrumSamples, v.size());
         for (int i = 0; i < NSpectrumSamples; ++i)
             values[i] = v[i];
+        wavelengths.fill(-1);
+        pdf.fill(0);
     }
 
     PBRT_CPU_GPU
@@ -232,7 +279,22 @@ class SampledSpectrum {
     }
 
     PBRT_CPU_GPU
+    bool HasWavelengths() const { return wavelengths[0] != -1; }
+
+    PBRT_CPU_GPU
+    void SetWavelengths(const SampledWavelengths &lambda);
+
+    PBRT_CPU_GPU
     SampledSpectrum &operator+=(const SampledSpectrum &s) {
+        if (HasWavelengths() && s.HasWavelengths()) {
+            for (int i = 0; i < NSpectrumSamples; ++i) {
+                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ(pdf[i], s.pdf[i]);
+            }
+        } else if (!HasWavelengths() && s.HasWavelengths()) {
+            wavelengths = s.wavelengths;
+            pdf = s.pdf;
+        }
         for (int i = 0; i < NSpectrumSamples; ++i)
             values[i] += s.values[i];
         return *this;
@@ -263,6 +325,8 @@ class SampledSpectrum {
   private:
     friend struct SOA<SampledSpectrum>;
     pstd::array<Float, NSpectrumSamples> values;
+    pstd::array<Float, NSpectrumSamples> wavelengths;
+    pstd::array<Float, NSpectrumSamples> pdf;
 };
 
 // SampledWavelengths Definitions
@@ -307,7 +371,15 @@ class SampledWavelengths {
     PBRT_CPU_GPU
     Float &operator[](int i) { return lambda[i]; }
     PBRT_CPU_GPU
-    SampledSpectrum PDF() const { return SampledSpectrum(pdf); }
+    const pstd::array<Float, NSpectrumSamples> &LambdaArray() const { return lambda; }
+    PBRT_CPU_GPU
+    const pstd::array<Float, NSpectrumSamples> &PDFArray() const { return pdf; }
+    PBRT_CPU_GPU
+    SampledSpectrum PDF() const {
+        SampledSpectrum s(pdf);
+        s.SetWavelengths(*this);
+        return s;
+    }
 
     PBRT_CPU_GPU
     void TerminateSecondary() {
@@ -348,6 +420,15 @@ class SampledWavelengths {
     pstd::array<Float, NSpectrumSamples> lambda, pdf;
 };
 
+inline void SampledSpectrum::SetWavelengths(const SampledWavelengths &lambda) {
+    const auto &l = lambda.LambdaArray();
+    const auto &p = lambda.PDFArray();
+    for (int i = 0; i < NSpectrumSamples; ++i) {
+        wavelengths[i] = l[i];
+        pdf[i] = p[i];
+    }
+}
+
 // Spectrum Definitions
 class ConstantSpectrum {
   public:
@@ -357,7 +438,7 @@ class ConstantSpectrum {
     Float operator()(Float lambda) const { return c; }
     // ConstantSpectrum Public Methods
     PBRT_CPU_GPU
-    SampledSpectrum Sample(const SampledWavelengths &) const;
+    SampledSpectrum Sample(const SampledWavelengths &lambda) const;
 
     PBRT_CPU_GPU
     Float MaxValue() const { return c; }
@@ -386,6 +467,7 @@ class DenselySampledSpectrum {
     PBRT_CPU_GPU
     SampledSpectrum Sample(const SampledWavelengths &lambda) const {
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i) {
             int offset = std::lround(lambda[i]) - lambda_min;
             if (offset < 0 || offset >= values.size())
@@ -472,6 +554,7 @@ class PiecewiseLinearSpectrum {
     PBRT_CPU_GPU
     SampledSpectrum Sample(const SampledWavelengths &lambda) const {
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i)
             s[i] = (*this)(lambda[i]);
         return s;
@@ -512,6 +595,7 @@ class BlackbodySpectrum {
     PBRT_CPU_GPU
     SampledSpectrum Sample(const SampledWavelengths &lambda) const {
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i)
             s[i] = Blackbody(lambda[i], T) * normalizationFactor;
         return s;
@@ -542,6 +626,7 @@ class RGBAlbedoSpectrum {
     PBRT_CPU_GPU
     SampledSpectrum Sample(const SampledWavelengths &lambda) const {
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i)
             s[i] = rsp(lambda[i]);
         return s;
@@ -571,6 +656,7 @@ class RGBUnboundedSpectrum {
     PBRT_CPU_GPU
     SampledSpectrum Sample(const SampledWavelengths &lambda) const {
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i)
             s[i] = scale * rsp(lambda[i]);
         return s;
@@ -613,6 +699,7 @@ class RGBIlluminantSpectrum {
         if (!illuminant)
             return SampledSpectrum(0);
         SampledSpectrum s;
+        s.SetWavelengths(lambda);
         for (int i = 0; i < NSpectrumSamples; ++i)
             s[i] = scale * rsp(lambda[i]);
         return s * illuminant->Sample(lambda);
@@ -629,7 +716,20 @@ class RGBIlluminantSpectrum {
 
 // SampledSpectrum Inline Functions
 PBRT_CPU_GPU inline SampledSpectrum SafeDiv(SampledSpectrum a, SampledSpectrum b) {
+    if (a.HasWavelengths() && b.HasWavelengths()) {
+        for (int i = 0; i < NSpectrumSamples; ++i) {
+            DCHECK_EQ(a.wavelengths[i], b.wavelengths[i]);
+            DCHECK_EQ(a.pdf[i], b.pdf[i]);
+        }
+    }
     SampledSpectrum r;
+    if (a.HasWavelengths()) {
+        r.wavelengths = a.wavelengths;
+        r.pdf = a.pdf;
+    } else if (b.HasWavelengths()) {
+        r.wavelengths = b.wavelengths;
+        r.pdf = b.pdf;
+    }
     for (int i = 0; i < NSpectrumSamples; ++i)
         r[i] = (b[i] != 0) ? a[i] / b[i] : 0.;
     return r;

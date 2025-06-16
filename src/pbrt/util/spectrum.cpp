@@ -162,8 +162,10 @@ std::string BlackbodySpectrum::ToString() const {
     return StringPrintf("[ BlackbodySpectrum T: %f ]", T);
 }
 
-PBRT_CPU_GPU SampledSpectrum ConstantSpectrum::Sample(const SampledWavelengths &) const {
-    return SampledSpectrum(c);
+PBRT_CPU_GPU SampledSpectrum ConstantSpectrum::Sample(const SampledWavelengths &lambda) const {
+    SampledSpectrum s(c);
+    s.SetWavelengths(lambda);
+    return s;
 }
 
 std::string ConstantSpectrum::ToString() const {
