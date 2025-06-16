@@ -324,6 +324,8 @@ class SampledSpectrum {
 
   private:
     friend struct SOA<SampledSpectrum>;
+    friend PBRT_CPU_GPU SampledSpectrum SafeDiv(SampledSpectrum a,
+                                                SampledSpectrum b);
     pstd::array<Float, NSpectrumSamples> values;
     pstd::array<Float, NSpectrumSamples> wavelengths;
     pstd::array<Float, NSpectrumSamples> pdf;
