@@ -27,8 +27,31 @@
 #include <numeric>
 #include <string>
 #include <vector>
+#ifndef PBRT_IS_GPU_CODE
+#include <mysql/mysql.h>
+#endif
 
 namespace pbrt {
+
+#ifndef PBRT_IS_GPU_CODE
+void LogSpectrumAssert(const char *file, int line, const char *tag, Float a,
+                       Float b);
+
+#define DCHECK_EQ_WAVELENGTH(a, b)                                               \
+    do {                                                                         \
+        pbrt::LogSpectrumAssert(__FILE__, __LINE__, "wavelength", (a), (b));     \
+        DCHECK_EQ((a), (b));                                                     \
+    } while (false)
+
+#define DCHECK_EQ_PDF(a, b)                                                      \
+    do {                                                                         \
+        pbrt::LogSpectrumAssert(__FILE__, __LINE__, "pdf", (a), (b));            \
+        DCHECK_EQ((a), (b));                                                     \
+    } while (false)
+#else
+#define DCHECK_EQ_WAVELENGTH(a, b) DCHECK_EQ((a), (b))
+#define DCHECK_EQ_PDF(a, b) DCHECK_EQ((a), (b))
+#endif
 
 // Spectrum Constants
 constexpr Float Lambda_min = 360, Lambda_max = 830;
@@ -103,8 +126,8 @@ class SampledSpectrum {
     SampledSpectrum &operator-=(const SampledSpectrum &s) {
         if (HasWavelengths() && s.HasWavelengths()) {
             for (int i = 0; i < NSpectrumSamples; ++i) {
-                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
-                DCHECK_EQ(pdf[i], s.pdf[i]);
+                DCHECK_EQ_WAVELENGTH(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ_PDF(pdf[i], s.pdf[i]);
             }
         } else if (!HasWavelengths() && s.HasWavelengths()) {
             wavelengths = s.wavelengths;
@@ -136,8 +159,8 @@ class SampledSpectrum {
     SampledSpectrum &operator*=(const SampledSpectrum &s) {
         if (HasWavelengths() && s.HasWavelengths()) {
             for (int i = 0; i < NSpectrumSamples; ++i) {
-                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
-                DCHECK_EQ(pdf[i], s.pdf[i]);
+                DCHECK_EQ_WAVELENGTH(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ_PDF(pdf[i], s.pdf[i]);
             }
         } else if (!HasWavelengths() && s.HasWavelengths()) {
             wavelengths = s.wavelengths;
@@ -174,8 +197,8 @@ class SampledSpectrum {
     SampledSpectrum &operator/=(const SampledSpectrum &s) {
         if (HasWavelengths() && s.HasWavelengths()) {
             for (int i = 0; i < NSpectrumSamples; ++i) {
-                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
-                DCHECK_EQ(pdf[i], s.pdf[i]);
+                DCHECK_EQ_WAVELENGTH(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ_PDF(pdf[i], s.pdf[i]);
             }
         } else if (!HasWavelengths() && s.HasWavelengths()) {
             wavelengths = s.wavelengths;
@@ -288,8 +311,8 @@ class SampledSpectrum {
     SampledSpectrum &operator+=(const SampledSpectrum &s) {
         if (HasWavelengths() && s.HasWavelengths()) {
             for (int i = 0; i < NSpectrumSamples; ++i) {
-                DCHECK_EQ(wavelengths[i], s.wavelengths[i]);
-                DCHECK_EQ(pdf[i], s.pdf[i]);
+                DCHECK_EQ_WAVELENGTH(wavelengths[i], s.wavelengths[i]);
+                DCHECK_EQ_PDF(pdf[i], s.pdf[i]);
             }
         } else if (!HasWavelengths() && s.HasWavelengths()) {
             wavelengths = s.wavelengths;
@@ -720,8 +743,8 @@ class RGBIlluminantSpectrum {
 PBRT_CPU_GPU inline SampledSpectrum SafeDiv(SampledSpectrum a, SampledSpectrum b) {
     if (a.HasWavelengths() && b.HasWavelengths()) {
         for (int i = 0; i < NSpectrumSamples; ++i) {
-            DCHECK_EQ(a.wavelengths[i], b.wavelengths[i]);
-            DCHECK_EQ(a.pdf[i], b.pdf[i]);
+            DCHECK_EQ_WAVELENGTH(a.wavelengths[i], b.wavelengths[i]);
+            DCHECK_EQ_PDF(a.pdf[i], b.pdf[i]);
         }
     }
     SampledSpectrum r;

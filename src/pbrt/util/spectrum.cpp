@@ -24,6 +24,9 @@
 #include <algorithm>
 #include <cmath>
 #include <map>
+#ifndef PBRT_IS_GPU_CODE
+#include <mysql/mysql.h>
+#endif
 
 // I don't know how this is happening (somehow via wingdi.h?), but not cool,
 // Windows, not cool...
@@ -2846,5 +2849,25 @@ std::string FindMatchingNamedSpectrum(Spectrum s) {
     }
     return "";
 }
+
+#ifndef PBRT_IS_GPU_CODE
+void LogSpectrumAssert(const char *file, int line, const char *tag, Float a,
+                       Float b) {
+    MYSQL *conn = mysql_init(nullptr);
+    if (!conn)
+        return;
+    if (!mysql_real_connect(conn, "localhost", "koharu", "lauhuching0158",
+                             "pbrtass", 0, nullptr, 0)) {
+        mysql_close(conn);
+        return;
+    }
+    char query[512];
+    snprintf(query, sizeof(query),
+             "INSERT INTO s1(location, val1, val2) VALUES('file:%s,line:%d','%s:%f','%s:%f')",
+             file, line, tag, (double)a, tag, (double)b);
+    mysql_query(conn, query);
+    mysql_close(conn);
+}
+#endif
 
 }  // namespace pbrt
